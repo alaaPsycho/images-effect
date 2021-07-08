@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+h1{
+    position: absolute;
+    top: 10PX;
+    text-align: center;
+    font-size: 60PX;
+    color: white;
+    text-shadow: 0 5PX 15PX #eee;
+    text-transform: uppercase;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 1100PX;
+
+}
+.container img{
+    max-width:350PX ;
+    object-fit: cover;
+    transform: perspective(800PX) rotateY(20deg);
+}
+.container:hover img{
+    opacity: 0.1;
+}
+.container img:hover{
+    opacity: 1;
+    transform: perspective(800PX) rotateY(0);
+    border-radius: 5PX;
+    box-shadow: 0PX 5PX 5PX  #eee;
+}
+
+
+.overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    transition: 0.5s;
+}
+
+.overlay img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: 70vh;
+    border-radius: 6PX;
+    transition: 0.5s;
+}
+
+.overlay span{
+    z-index: 5;
+    font-size: 50PX;
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    background: red;
+    box-shadow: 0 5px 20PX rgba(0,0, 0, 0.6);
+    cursor: pointer;
+    font-weight: bold;
+    object-fit: cover;
+    line-height: 50PX;
+    border-radius: 50%;
+}
