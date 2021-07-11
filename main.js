@@ -33,4 +33,16 @@ function overlayNone(){
 overlay.children[0].addEventListener('click',stopPro)
 function stopPro(e){
     e.stopPropagation();
+}
+//close with clavier
+document.addEventListener('keypress',code)
 
+    function code(event){
+        
+        if(event.keyCode == 13   &&  (overlay.style ='display:block')) {
+            overlay.style ='display:none';
+        }
+        else{
+            return false;
+        }
+    }
