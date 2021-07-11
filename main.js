@@ -23,4 +23,14 @@ closeImg.addEventListener('click',closeOverlay)
 function closeOverlay() {
     overlay.style.display ='none';
 }
+//close overlay on click
+overlay.addEventListener('click',overlayNone)
+
+function overlayNone(){
+    this.style ='display:none'
+}
+//stop propogation
+overlay.children[0].addEventListener('click',stopPro)
+function stopPro(e){
+    e.stopPropagation();
 
